@@ -1,0 +1,2017 @@
+<h1 id="comp2911-notes">COMP2911 Notes</h1>
+
+<p><div class="toc">
+<ul>
+<li><a href="#comp2911-notes">COMP2911 Notes</a></li>
+<li><a href="#week-1">Week 1</a><ul>
+<li><a href="#what-is-object-oriented-programming">What is Object-Oriented Programming?</a></li>
+<li><a href="#javadoc">Javadoc</a><ul>
+<li><ul>
+<li><a href="#general-format-of-a-doc-comment">General Format of a Doc Comment</a></li>
+<li><a href="#block-tags-annotations">Block Tags / Annotations</a></li>
+<li><a href="#custom-tags">Custom Tags</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#java-tutorials">Java Tutorials</a><ul>
+<li><a href="#the-java-technology">The Java Technology</a></li>
+<li><a href="#oop-concepts">OOP Concepts</a></li>
+<li><a href="#language-basics">Language Basics</a><ul>
+<li><a href="#variables">Variables</a></li>
+<li><a href="#arrays">Arrays</a></li>
+<li><a href="#type-comparison">Type Comparison</a></li>
+<li><a href="#control-flow">Control Flow</a></li>
+</ul>
+</li>
+<li><a href="#classes-and-objects">Classes and Objects</a><ul>
+<li><a href="#skeleton-of-a-class">Skeleton of a Class</a></li>
+<li><a href="#modifiers">Modifiers</a></li>
+<li><a href="#encapsulation">Encapsulation</a></li>
+<li><a href="#arbitrary-number-of-arguments">Arbitrary Number of Arguments</a></li>
+<li><a href="#this-keyword">this Keyword</a></li>
+<li><a href="#objects">Objects</a></li>
+<li><a href="#initializing-class-variables-static-fields">Initializing Class Variables (Static Fields)</a></li>
+<li><a href="#initializing-instance-variables-non-static-fields">Initializing Instance Variables (Non-Static Fields)</a></li>
+<li><a href="#enum-types">Enum Types</a></li>
+</ul>
+</li>
+<li><a href="#annotations">Annotations</a></li>
+<li><a href="#interfaces-and-inheritance">Interfaces and Inheritance</a><ul>
+<li><a href="#interface-definition">Interface Definition</a></li>
+<li><a href="#interface-implementation">Interface Implementation</a></li>
+<li><a href="#inheritance-theory">Inheritance Theory</a></li>
+<li><a href="#inheritance-and-super">Inheritance and super</a></li>
+</ul>
+</li>
+<li><a href="#numbers-and-strings">Numbers and Strings</a></li>
+<li><a href="#date-time-package">Date-Time Package</a></li>
+</ul>
+</li>
+<li><a href="#eclipse-tutorial">Eclipse Tutorial</a></li>
+</ul>
+</li>
+<li><a href="#week-2">Week 2</a><ul>
+<li><a href="#liskov-substitution-principle">Liskov Substitution Principle</a></li>
+<li><a href="#oo-programming-vs-abstract-data-types">OO Programming vs. Abstract Data Types</a></li>
+<li><a href="#object-as-a-superclass">Object as a Superclass</a><ul>
+<li><a href="#clone-method">clone() Method</a></li>
+<li><a href="#equals-method">equals() Method</a><ul>
+<li><a href="#4-common-pitfalls">4 Common Pitfalls</a></li>
+</ul>
+</li>
+<li><a href="#tostring-method">toString() Method</a></li>
+<li><a href="#hashcode-method">hashCode() Method</a></li>
+<li><a href="#getclass-method">getClass() Method</a></li>
+<li><a href="#finalize-method">finalize() Method</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#week-3">Week 3</a><ul>
+<li><a href="#applying-design-by-contract">Applying “Design by Contract”</a></li>
+<li><a href="#covariance-and-contravariance">Covariance and Contravariance</a></li>
+<li><a href="#exceptions-in-java">Exceptions in Java</a></li>
+<li><a href="#junit-in-eclipse">JUnit in Eclipse</a></li>
+<li><a href="#eclipse-debugger">Eclipse Debugger</a></li>
+</ul>
+</li>
+<li><a href="#week-4">Week 4</a><ul>
+<li><a href="#oop-design-process">OOP Design Process</a></li>
+<li><a href="#use-cases">Use Cases</a></li>
+<li><a href="#crc-cards">CRC Cards</a></li>
+<li><a href="#uml-diagrams">UML Diagrams</a><ul>
+<li><a href="#class-diagrams">Class Diagrams</a><ul>
+<li><a href="#classes">Classes</a></li>
+<li><a href="#attributes-and-operations">Attributes and Operations</a></li>
+<li><a href="#relationships">Relationships</a><ul>
+<li><a href="#types">Types</a></li>
+<li><a href="#multiplicity">Multiplicity</a></li>
+<li><a href="#roles">Roles</a></li>
+<li><a href="#directionality">Directionality</a></li>
+<li><a href="#generalization-and-realization">Generalization and Realization</a></li>
+</ul>
+</li>
+<li><a href="#other-components">Other Components</a></li>
+</ul>
+</li>
+<li><a href="#sequence-diagrams">Sequence Diagrams</a><ul>
+<li><a href="#lifelines">Lifelines</a></li>
+<li><a href="#messages">Messages</a></li>
+<li><a href="#guards">Guards</a></li>
+<li><a href="#combined-fragments-alternatives-options-and-loops">Combined Fragments (Alternatives, Options, and Loops)</a><ul>
+<li><a href="#alternatives">Alternatives</a></li>
+<li><a href="#options">Options</a></li>
+<li><a href="#loops">Loops</a></li>
+<li><a href="#break">Break</a></li>
+<li><a href="#parallel">Parallel</a></li>
+</ul>
+</li>
+<li><a href="#interaction-occurrence">Interaction Occurrence</a></li>
+<li><a href="#gates">Gates</a></li>
+<li><a href="#frame">Frame</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#law-of-demeter">Law of Demeter</a></li>
+</ul>
+</li>
+<li><a href="#week-5">Week 5</a><ul>
+<li><a href="#polymorphism-and-interface-types">Polymorphism and Interface Types</a></li>
+<li><a href="#java-generics-tutorial">Java Generics Tutorial</a></li>
+<li><a href="#java-generics-gotchas">Java Generics Gotchas</a></li>
+<li><a href="#java-generics-faq">Java Generics FAQ</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</p>
+
+<hr>
+
+
+
+<h1 id="week-1">Week 1</h1>
+
+<p>Intro to OOP and crash course on Java and Eclipse.</p>
+
+
+
+<h2 id="what-is-object-oriented-programming">What is Object-Oriented Programming?</h2>
+
+<p><a href="http://www.dummies.com/programming/java/understanding-javas-object-oriented-programming-oop/">Dummies: What is Object-Oriented Programming?</a> </p>
+
+<dl>
+<dt>Classes</dt>
+<dd>provides a “blueprint” to create objects</dd>
+
+<dd>i.e. a builder’s blueprint to crate a house</dd>
+
+<dt>Objects</dt>
+<dd>instances of a class</dd>
+
+<dd>i.e. a specific house</dd>
+</dl>
+
+<ul>
+<li>Why use OOP? <br>
+<ul><li><strong>inherit</strong> parts of blueprint for different designs, only modify what is different</li>
+<li>i.e. House base blueprint <br>
+<ul><li>ground flooro + second floor, no indoor walls</li></ul></li>
+<li>i.e. Three-bedroom house blueprint <br>
+<ul><li><em>*inherits</em> house base blueprint</li>
+<li>Lower floors =&gt; see original house bluepint</li>
+<li>Second floor =&gt; add bedrooms</li></ul></li></ul></li>
+</ul>
+
+
+
+<h2 id="javadoc">Javadoc</h2>
+
+<p><a href="http://www.oracle.com/technetwork/articles/java/index-137868.html">Javadoc Reference</a></p>
+
+<ul>
+<li>documentation in Java code <br>
+<ul><li>precedes: class, field, constructor, method declaration</li></ul></li>
+<li>2 parts <br>
+<ul><li>description</li>
+<li>block tags</li></ul></li>
+<li>Order of tags</li>
+</ul>
+
+
+
+<pre class="prettyprint"><code class="language-java hljs "><span class="hljs-annotation">@author</span>
+<span class="hljs-annotation">@version</span>
+<span class="hljs-annotation">@param</span>
+<span class="hljs-annotation">@return</span>
+<span class="hljs-annotation">@exception</span> (<span class="hljs-annotation">@throws</span> is a synonym)
+<span class="hljs-annotation">@see</span>
+<span class="hljs-annotation">@since</span>
+<span class="hljs-annotation">@serial</span>
+<span class="hljs-annotation">@deprecated</span></code></pre>
+
+
+
+<h4 id="general-format-of-a-doc-comment">General Format of a Doc Comment</h4>
+
+
+
+<pre class="prettyprint"><code class="language-java hljs "><span class="hljs-javadoc">/**
+ * Summary sentence giving concise but complete 
+ * description. Javadoc copies this first sentence
+ * to the appropriate package summary.
+ * &lt;p&gt;
+ * Add description beyond the name (provide more
+ * information). Method descriptions begin with a
+ * verb!
+ *<span class="hljs-javadoctag"> @param</span> url  an absolute URL giving the base location of the iamge
+ *<span class="hljs-javadoctag"> @param</span> name the location of the iamge, relative to the url argument
+ *<span class="hljs-javadoctag"> @return</span>     the image at the specified URL
+ *<span class="hljs-javadoctag"> @see</span>        Image</span></code></pre>
+
+
+
+<h4 id="block-tags-annotations">Block Tags / Annotations</h4>
+
+<table>
+<thead>
+<tr>
+  <th>Tag</th>
+  <th align="center">Use</th>
+</tr>
+</thead>
+<tbody><tr>
+  <td><code>@exception</code></td>
+  <td align="center">details exceptions that are thrown</td>
+</tr>
+<tr>
+  <td><code>@param</code></td>
+  <td align="center">parameters, methods &amp; constructors only</td>
+</tr>
+<tr>
+  <td><code>@return</code></td>
+  <td align="center">return variable and description</td>
+</tr>
+<tr>
+  <td><code>@see</code></td>
+  <td align="center">other methods that might be useful to look at</td>
+</tr>
+<tr>
+  <td><code>@throws</code></td>
+  <td align="center">same as exception</td>
+</tr>
+</tbody></table>
+
+
+
+
+<h4 id="custom-tags">Custom Tags</h4>
+
+<table>
+<thead>
+<tr>
+  <th>Tag</th>
+  <th align="center">Use</th>
+</tr>
+</thead>
+<tbody><tr>
+  <td><code>@inv</code></td>
+  <td align="center">Invariant</td>
+</tr>
+<tr>
+  <td><code>@pre</code></td>
+  <td align="center">Precondition, usually implicitly done by <code>@throws</code> and <code>@param</code></td>
+</tr>
+<tr>
+  <td><code>@post</code></td>
+  <td align="center">Postcondition</td>
+</tr>
+</tbody></table>
+
+
+
+
+<h2 id="java-tutorials">Java Tutorials</h2>
+
+<p><a href="http://docs.oracle.com/javase/tutorial/">Java Tutorials Website</a></p>
+
+
+
+<h3 id="the-java-technology">The Java Technology</h3>
+
+<ul>
+<li>source code in <code>.java</code> extension</li>
+<li>=&gt; compiled into <code>.class</code> file by <code>javac</code> compiler <br>
+<ul><li>contains <strong>bytecodes</strong></li>
+<li>the machine langauge of Java Virtual Machine,  Java VM</li></ul></li>
+<li>=&gt; <code>java</code> launcher tool runs application in an <strong>instance</strong> of the <strong>Java VM</strong> <br>
+<ul><li>code is portable as it runs in VM</li></ul></li>
+</ul>
+
+<p><img src="http://docs.oracle.com/javase/tutorial/figures/getStarted/getStarted-compiler.gif" alt="Java software development process" title=""></p>
+
+<p><img src="http://docs.oracle.com/javase/tutorial/figures/getStarted/helloWorld.gif" alt="Java VM makes java portable" title=""></p>
+
+
+
+<h3 id="oop-concepts">OOP Concepts</h3>
+
+<dl>
+<dt>Object</dt>
+<dd>a software bundle of related <strong>state</strong> and <strong>behavior</strong></dd>
+
+<dt>Class</dt>
+<dd>blueprint or prototype <em>from which</em> objects are created</dd>
+
+<dt>Inheritance</dt>
+<dd>subclasses can inherit state and behavior from superclasses</dd>
+
+<dt>Interface</dt>
+<dd>enables the reuse of functionality</dd>
+
+<dd><em>contract</em> between a <em>class</em> and the <em>outside world</em></dd>
+
+<dd><ul>
+interface specifies behavior
+</ul></dd>
+
+<dd><ul>
+class promises to <em>implement</em> it accordingly
+</ul></dd>
+
+<dt>Package</dt>
+<dd><strong>namespace</strong> for organzing classes and interfaces in a logical manner</dd>
+
+<dt>Encapsulation</dt>
+<dd>the <strong>internal representation</strong> of an object is generally <strong>hidden</strong> from view outside of the object’s definition</dd>
+
+<dd>data hiding</dd>
+
+<dd>hide unnecessary data in classes and provide a clear, simple <strong>interface</strong> for working with them</dd>
+
+<dd>leads to abstraction</dd>
+
+<dt>Abstraction</dt>
+<dd>deal with objects considering their important characteristics, ignoring all other details</dd>
+
+<dt>Polymorphism</dt>
+<dd>work in the same manner with different objects</dd>
+
+<dd>given some <em>abstract behavior</em>, individual methods define implementations</dd>
+</dl>
+
+
+
+<h3 id="language-basics">Language Basics</h3>
+
+
+
+<h4 id="variables">Variables</h4>
+
+<ul>
+<li><strong>Instance Variables (Non-Static Fields)</strong> <br>
+<ul><li>what <em>objects</em> store their individual states in</li>
+<li><em>non-static fields</em> — values are unique to <em>each instance</em></li></ul></li>
+<li><strong>Class Variables (Static Fields)</strong> <br>
+<ul><li>any field declared with <code>static</code>  modifier</li>
+<li>exactly one copy across <em>all instances</em></li>
+<li>add <code>final</code> to show that it will never change</li></ul></li>
+<li><strong>Local Variables</strong> <br>
+<ul><li>what <em>methods</em> store temporary states in</li>
+<li>no special keywords, <code>int count = 0;</code></li></ul></li>
+<li><strong>Parameters</strong> <br>
+<ul><li><em>variables</em> that functions accept</li>
+<li><code>public static void main(String[] args)</code></li></ul></li>
+</ul>
+
+
+
+<h4 id="arrays">Arrays</h4>
+
+<ul>
+<li>length of array <em>fixed</em> when created</li>
+<li>single type</li>
+</ul>
+
+<p>Declaration</p>
+
+<ul>
+<li>type is <code>type[]</code></li>
+<li>array’s name</li>
+</ul>
+
+
+
+<pre class="prettyprint"><code class="language-java hljs "><span class="hljs-comment">// declare an array of integers</span>
+<span class="hljs-keyword">int</span>[] anArray;</code></pre>
+
+<p>Creating, Initializing, and Accessing</p>
+
+<ul>
+<li>use the <code>new</code> operator</li>
+</ul>
+
+
+
+<pre class="prettyprint"><code class="language-java hljs "><span class="hljs-comment">// create an array of integers</span>
+anArray = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">10</span>];
+
+<span class="hljs-comment">// assign values to each element</span>
+<span class="hljs-comment">// also access elements like this</span>
+anArray[<span class="hljs-number">0</span>] = <span class="hljs-number">100</span>;
+anArray[<span class="hljs-number">1</span>] = <span class="hljs-number">200</span>;
+anArray[<span class="hljs-number">2</span>] = <span class="hljs-number">300</span>;
+
+<span class="hljs-comment">// shortcut for initialization</span>
+<span class="hljs-comment">// length determined by number of CSV</span>
+<span class="hljs-keyword">int</span>[] anArray = {
+    <span class="hljs-number">100</span>, <span class="hljs-number">200</span>, <span class="hljs-number">300</span>,
+    <span class="hljs-number">400</span>, <span class="hljs-number">500</span>, <span class="hljs-number">600</span>,
+    <span class="hljs-number">700</span>, <span class="hljs-number">800</span>, <span class="hljs-number">900</span>, <span class="hljs-number">1000</span>
+};</code></pre>
+
+<p>Multidimensional arrays</p>
+
+<ul>
+<li>two plus sets of brackets, <code>String[][] names</code></li>
+</ul>
+
+
+
+<pre class="prettyprint"><code class="language-java hljs "><span class="hljs-comment">// note the braces for each array</span>
+String[][] names = {
+    {<span class="hljs-string">"Mr. "</span>, <span class="hljs-string">"Mrs."</span>, <span class="hljs-string">"Ms. "</span>},
+    {<span class="hljs-string">"Smith"</span>, <span class="hljs-string">"Jones"</span>}
+};
+
+<span class="hljs-comment">// Mr. Smith</span>
+System.out.println(names[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>] + names[<span class="hljs-number">1</span>][<span class="hljs-number">0</span>]);
+
+<span class="hljs-comment">// Ms. Jones</span>
+System.out.println(names[<span class="hljs-number">0</span>][<span class="hljs-number">2</span>] + names[<span class="hljs-number">1</span>][<span class="hljs-number">1</span>]);</code></pre>
+
+<p>Determine size</p>
+
+<ul>
+<li>built-in <code>length</code> property</li>
+</ul>
+
+
+
+<pre class="prettyprint"><code class="language-java hljs "><span class="hljs-keyword">int</span> size = anArray.length;</code></pre>
+
+<p>Copying arrays</p>
+
+
+
+<pre class="prettyprint"><code class="language-java hljs "><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">arraycopy</span> (Object src, <span class="hljs-keyword">int</span> srcPos, Object dest, <span class="hljs-keyword">int</span> destPos, <span class="hljs-keyword">int</span> length)</code></pre>
+
+<ul>
+<li><code>System</code> class’s <code>arraycopy</code> method <br>
+<ul><li><code>pos</code> — starting position in array to copy to/from</li>
+<li><code>length</code> — number of elements to copy</li></ul></li>
+</ul>
+
+
+
+<pre class="prettyprint"><code class="language-java hljs "><span class="hljs-comment">// example of use</span>
+<span class="hljs-keyword">char</span>[] copyFrom = {<span class="hljs-string">'d'</span>, <span class="hljs-string">'e'</span>, <span class="hljs-string">'c'</span>, <span class="hljs-string">'a'</span>, <span class="hljs-string">'f'</span>, <span class="hljs-string">'f'</span>, <span class="hljs-string">'e'</span>,
+                   <span class="hljs-string">'i'</span>, <span class="hljs-string">'n'</span>, <span class="hljs-string">'a'</span>, <span class="hljs-string">'t'</span>, <span class="hljs-string">'e'</span>, <span class="hljs-string">'d'</span>};
+<span class="hljs-keyword">char</span>[] copyTo = <span class="hljs-keyword">new</span> <span class="hljs-keyword">char</span>[<span class="hljs-number">7</span>];
+
+<span class="hljs-comment">// use dot operator on System</span>
+System.arraycopy(copyFrom, <span class="hljs-number">2</span>, copyTo, <span class="hljs-number">0</span>, <span class="hljs-number">7</span>);</code></pre>
+
+<ul>
+<li><code>java.util.Arrays</code> method <code>copyOfRange</code></li>
+<li>returns a new array, don’t have to create one</li>
+</ul>
+
+
+
+<pre class="prettyprint"><code class="language-java hljs ">type[] copyOfRange(type[] original, <span class="hljs-keyword">int</span> from, <span class="hljs-keyword">int</span> to)</code></pre>
+
+<p>Array Manipulations</p>
+
+<p><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html"><code>java.util.Arrays</code></a></p>
+
+<ul>
+<li>standard operations: copying, sorting, searching</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+  <th>Function</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+  <td><code>copyOfRange</code></td>
+  <td>returns a copied array</td>
+</tr>
+<tr>
+  <td><code>binarySearch</code></td>
+  <td>returns index of a specific value in array</td>
+</tr>
+<tr>
+  <td><code>equals</code></td>
+  <td>comparing two arrays for equality</td>
+</tr>
+<tr>
+  <td><code>sort</code></td>
+  <td>sort an array into <em>ascending</em> order (sequentially)</td>
+</tr>
+<tr>
+  <td><code>parallelSort</code></td>
+  <td>sort an array into <em>ascending</em> order (concurrently)</td>
+</tr>
+</tbody></table>
+
+
+
+
+<h4 id="type-comparison">Type Comparison</h4>
+
+<ul>
+<li><code>instanceof</code> <strong>operator</strong> tests if an object is an instance of a <br>
+<ul><li>class</li>
+<li>subclass</li>
+<li>class that implements a particular interface</li></ul></li>
+<li><code>null</code> is not an instance of anything</li>
+</ul>
+
+
+
+<pre class="prettyprint"><code class="language-java hljs ">class Parent{}
+class Child extends Parent implements MyInterface{}
+interface MyInterface{}
+
+Parent obj1 = <span class="hljs-keyword">new</span> Parent();
+Parent obj2 = <span class="hljs-keyword">new</span> Child();
+
+<span class="hljs-comment">// obj1 is an instance of Parent only</span>
+<span class="hljs-comment">// true</span>
+System.out.println(<span class="hljs-string">"obj1 instanceof Parent: "</span> + (obj1 <span class="hljs-keyword">instanceof</span> Parent));
+<span class="hljs-comment">// false</span>
+System.out.println(<span class="hljs-string">"obj1 instanceof MyInterface: "</span> + (obj1 <span class="hljs-keyword">instanceof</span> MyInterface));
+
+<span class="hljs-comment">//obj2 is an instance of Child and MyInterface</span>
+<span class="hljs-comment">// true</span>
+System.out.println(<span class="hljs-string">"obj2 instanceof Child: "</span> + (obj2 <span class="hljs-keyword">instanceof</span> Child));
+<span class="hljs-comment">// true</span>
+System.out.println(<span class="hljs-string">"obj2 isntanceof MyInterface: "</span> + (obj2 <span class="hljs-keyword">instanceof</span> MyInterface));</code></pre>
+
+
+
+<h4 id="control-flow">Control Flow</h4>
+
+<p>For the most part, they are the same as in C.</p>
+
+<ul>
+<li><code>if</code>/<code>else</code> statements</li>
+<li><code>switch</code> statements <br>
+<ul><li>can also use strings <br>
+<ul><li>careful of <code>NullPointerException</code></li></ul></li></ul></li>
+</ul>
+
+
+
+<pre class="prettyprint"><code class="language-java hljs "><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getMonthNumber</span>(String month) {
+    <span class="hljs-keyword">int</span> monthNumber = <span class="hljs-number">0</span>;
+
+    <span class="hljs-comment">// ensure month not null</span>
+    <span class="hljs-comment">// avoids NullPointerException error</span>
+    <span class="hljs-keyword">if</span> (month == <span class="hljs-keyword">null</span>) {
+        <span class="hljs-keyword">return</span> monthNumber;
+    }
+
+    <span class="hljs-keyword">switch</span>(month.toLowerCase()) {
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"january"</span>:
+            monthNumber = <span class="hljs-number">1</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"february"</span>
+            monthNumber = <span class="hljs-number">2</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">default</span>:
+            monthNumber = <span class="hljs-number">0</span>;
+            <span class="hljs-keyword">break</span>;
+    }
+}</code></pre>
+
+<ul>
+<li><code>while</code> and <code>do-while</code> statements</li>
+<li><code>for</code> statement <br>
+<ul><li>remember can omit initialization, termination, increment</li></ul></li>
+<li><code>break</code> statement <br>
+<ul><li><strong>unlabeled</strong> — terminates the <em>innermost</em> statement</li>
+<li><strong>labeled</strong> — terminates an <em>outer</em> statement</li></ul></li>
+</ul>
+
+
+
+<pre class="prettyprint"><code class="language-java hljs ">    <span class="hljs-keyword">int</span>[][] arrayofInts = {
+        {<span class="hljs-number">32</span>, <span class="hljs-number">87</span>, <span class="hljs-number">3</span>, <span class="hljs-number">589</span>},
+        {<span class="hljs-number">12</span>, <span class="hljs-number">1076</span>, <span class="hljs-number">2000</span>, <span class="hljs-number">8</span>},
+        {<span class="hljs-number">622</span>, <span class="hljs-number">127</span>, <span class="hljs-number">77</span>, <span class="hljs-number">955</span>}
+    };
+    <span class="hljs-keyword">int</span> searchfor = <span class="hljs-number">12</span>;
+
+    <span class="hljs-keyword">int</span> i, j = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">boolean</span> foundIt = <span class="hljs-keyword">false</span>;
+
+    <span class="hljs-comment">// label the outer loop search one indent level down</span>
+search:
+    <span class="hljs-keyword">for</span>(i = <span class="hljs-number">0</span>; i &lt; arrayOfInts.length; i++) {
+
+        <span class="hljs-keyword">for</span> (j = <span class="hljs-number">0</span>; j &lt; arrayOfInts[i].length; j++) {
+            <span class="hljs-keyword">if</span> (arrayOfInts[i][j] == searchfor) {
+                foundIt = <span class="hljs-keyword">true</span>;
+                <span class="hljs-comment">// break out of the outer loop too!</span>
+                <span class="hljs-keyword">break</span> search;
+            }
+        }
+    }</code></pre>
+
+<ul>
+<li><code>continue</code> statement <br>
+<ul><li>also has <strong>unlabelled</strong> and <strong>labelled</strong></li>
+<li>label the outer loop with <code>search</code> and use  <code>continue search</code></li></ul></li>
+<li><code>return</code> statement</li>
+</ul>
+
+
+
+<h3 id="classes-and-objects">Classes and Objects</h3>
+
+
+
+<h4 id="skeleton-of-a-class">Skeleton of a Class</h4>
+
+
+
+<pre class="prettyprint"><code class="language-java hljs ">class Bicycle {
+    <span class="hljs-comment">// Fields</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> cadence = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> speed = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> gear = <span class="hljs-number">1</span>;
+
+    <span class="hljs-comment">// Constructor</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-title">Bicycle</span> (<span class="hljs-keyword">int</span> startCadence, <span class="hljs-keyword">int</span> startSpeed, <span class="hljs-keyword">int</span> startGear) {
+        gear = startGear;
+        cadence = startCadence;
+        speed = startSpeed;
+    }
+
+    <span class="hljs-comment">// Methods</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setCadence</span>(<span class="hljs-keyword">int</span> newValue) {
+        cadence = newValue;
+    }
+}</code></pre>
+
+
+
+<h4 id="modifiers">Modifiers</h4>
+
+<p>Access Modifiers</p>
+
+<table>
+<thead>
+<tr>
+  <th>Modifier</th>
+  <th>Accessible from</th>
+</tr>
+</thead>
+<tbody><tr>
+  <td><code>public</code></td>
+  <td>all classes, packages, subclass, world</td>
+</tr>
+<tr>
+  <td><code>private</code></td>
+  <td>within its own class</td>
+</tr>
+<tr>
+  <td><code>protected</code></td>
+  <td>all classes, packages, subclasses</td>
+</tr>
+</tbody></table>
+
+
+<ul>
+<li>use <code>private</code> unless you have a good reason not to</li>
+<li>avoid <code>public</code> fields except for <strong>constants</strong></li>
+</ul>
+
+<p>Other Modifiers</p>
+
+<table>
+<thead>
+<tr>
+  <th>Modifier</th>
+  <th>Action</th>
+</tr>
+</thead>
+<tbody><tr>
+  <td><code>static</code></td>
+  <td>exactly one copy across all instances of a class</td>
+</tr>
+<tr>
+  <td><code>final</code></td>
+  <td>cannot be changed</td>
+</tr>
+</tbody></table>
+
+
+<p>* use to define <strong>constants</strong> (use UPPER_CASE)</p>
+
+
+
+<pre class="prettyprint"><code class="language-java hljs "><span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">double</span> PI = <span class="hljs-number">3.14159</span>;</code></pre>
+
+
+
+<h4 id="encapsulation">Encapsulation</h4>
+
+<ul>
+<li>use <code>private</code> fields</li>
+<li>use <code>public</code> setters and getters</li>
+</ul>
+
+
+
+<h4 id="arbitrary-number-of-arguments">Arbitrary Number of Arguments</h4>
+
+<ul>
+<li><strong>varargs</strong> construct <code>type...</code>— pass an arbitrary number of values to a method</li>
+<li>constructs are treated like arrays <br>
+<ul><li>can get length, access elements, etc.</li></ul></li>
+</ul>
+
+
+
+<pre class="prettyprint"><code class="language-java hljs "><span class="hljs-keyword">public</span> Polygon <span class="hljs-title">polygonFrom</span> (Point... corners) {
+    <span class="hljs-comment">// note the ellipses above</span>
+    <span class="hljs-keyword">int</span> numberOfSides = corners.length;
+}</code></pre>
+
+
+
+<h4 id="this-keyword"><code>this</code> Keyword</h4>
+
+<ul>
+<li><code>this</code> refers to the <strong>current</strong> object</li>
+</ul>
+
+<p>Use when</p>
+
+<ul>
+<li>field is <strong>shadowed</strong> by a method or constructor parameter</li>
+</ul>
+
+
+
+<pre class="prettyprint"><code class="language-java hljs "><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Point</span> {</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> x = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> y = <span class="hljs-number">0</span>;
+
+    <span class="hljs-keyword">public</span> <span class="hljs-title">Point</span> (<span class="hljs-keyword">int</span> x, <span class="hljs-keyword">int</span> y) {
+        <span class="hljs-keyword">this</span>.x = x;
+        <span class="hljs-keyword">this</span>.y = y;
+    }
+}</code></pre>
+
+<ul>
+<li><strong>explicit constructor invocation</strong> — call another constructor in the same class</li>
+</ul>
+
+
+
+<pre class="prettyprint"><code class="language-java hljs "><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Rectangle</span> {</span>
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> x, y;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> width, height;
+
+    <span class="hljs-comment">// 3 constructors all invoke the third constructor</span>
+    <span class="hljs-comment">// with default values where missing</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-title">Rectangle</span>() {
+        <span class="hljs-keyword">this</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>);
+    }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-title">Rectangle</span>(<span class="hljs-keyword">int</span> width, <span class="hljs-keyword">int</span> height) {
+        <span class="hljs-keyword">this</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, width, height);
+    }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-title">Rectangle</span>(<span class="hljs-keyword">int</span> x, <span class="hljs-keyword">int</span> y, <span class="hljs-keyword">int</span> width, <span class="hljs-keyword">int</span> height) {
+        <span class="hljs-keyword">this</span>.x = x;
+        <span class="hljs-keyword">this</span>.y = y;
+        <span class="hljs-keyword">this</span>.width = width;
+        <span class="hljs-keyword">this</span>.height = height;
+    }
+}</code></pre>
+
+
+
+<h4 id="objects">Objects</h4>
+
+<ul>
+<li>use <code>new</code> to create a new object</li>
+</ul>
+
+
+
+<pre class="prettyprint"><code class="language-java hljs ">Point originOne = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">23</span>, <span class="hljs-number">94</span>);</code></pre>
+
+<ul>
+<li>reference fields and methods using <code>.</code> operator</li>
+<li><strong>garbage collection</strong> — Java runtime environment deletes objects when there are <em>*no more references</em> to that object <br>
+<ul><li>explicitly drop reference by setting to <code>null</code></li></ul></li>
+</ul>
+
+<p><img src="http://docs.oracle.com/javase/tutorial/figures/java/objects-multipleRefs.gif" alt="Object representation in memory" title=""></p>
+
+
+
+<h4 id="initializing-class-variables-static-fields">Initializing Class Variables (Static Fields)</h4>
+
+<p>Methods</p>
+
+<ul>
+<li>simple assignment</li>
+</ul>
+
+
+
+<pre class="prettyprint"><code class="language-java hljs "><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> capcity = <span class="hljs-number">10</span>;</code></pre>
+
+<ul>
+<li><strong>static initialization block</strong> <br>
+<ul><li>if initialization requires some logic</li></ul></li>
+</ul>
+
+
+
+<pre class="prettyprint"><code class="language-java hljs "><span class="hljs-keyword">static</span> {
+    <span class="hljs-comment">// whatever code / logic is needed for initialization</span>
+}</code></pre>
+
+<ul>
+<li><strong>private static  method</strong> <br>
+<ul><li>can be <em>reused</em> later if you need to reinitialize</li></ul></li>
+</ul>
+
+
+
+<pre class="prettyprint"><code class="language-java hljs "><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> varType myVar = initializeClassVariable();
+
+<span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> varType <span class="hljs-title">initializeClassVariable</span>() {
+    <span class="hljs-comment">// initialization code</span>
+}</code></pre>
+
+
+
+<h4 id="initializing-instance-variables-non-static-fields">Initializing Instance Variables (Non-Static Fields)</h4>
+
+<p>Methods</p>
+
+<ul>
+<li>in a constructor</li>
+<li><strong>initializer blocks</strong> <br>
+<ul><li>share a block of code between multiple constructors <br>
+<ul><li>Java compiler copies initializer bocks into every constructor</li></ul></li>
+<li>static initializer block without the <code>static</code></li></ul></li>
+</ul>
+
+
+
+<pre class="prettyprint"><code class="language-java hljs "><span class="hljs-keyword">int</span> initializeVariable() {
+    <span class="hljs-comment">// initialization code</span>
+}</code></pre>
+
+<ul>
+<li><strong>final method</strong> <br>
+<ul><li>cannot be <em>overriden</em> in a subclass</li></ul></li>
+</ul>
+
+
+
+<pre class="prettyprint"><code class="language-java hljs "><span class="hljs-keyword">private</span> varType myVar = initializeInstanceVariable();
+
+<span class="hljs-keyword">protected</span> <span class="hljs-keyword">final</span> varType <span class="hljs-title">initializeInstanceVariable</span>() {
+    <span class="hljs-comment">// initialization code goes here</span>
+}</code></pre>
+
+
+
+<h4 id="enum-types">Enum Types</h4>
+
+<p><a href="http://docs.oracle.com/javase/tutorial/java/javaOO/enum.html">See Java Tutorials for more detailed reference</a></p>
+
+<ul>
+<li><strong>enum</strong> type — variable can only hold values from a set of predefined constants <br>
+<ul><li>data sets where you know all possible values at compile time</li></ul></li>
+</ul>
+
+
+
+<pre class="prettyprint"><code class="language-java hljs "><span class="hljs-keyword">public</span> <span class="hljs-keyword">enum</span> Day {
+    <span class="hljs-comment">// put constants at the top, no ending semicolon</span>
+    SUNDAY, MONDAY, TUESDAY, WEDNESDAY,
+    THURSDAY, FRIDAY, SATURDAY
+    <span class="hljs-comment">// only end with semicolon when there are fields or methods after this</span>
+}</code></pre>
+
+<ul>
+<li><code>enum</code> declaration defines a <em>class</em></li>
+<li>implicitly extend <code>java.lang.Enum</code> <br>
+<ul><li>cannot extend anything else (no <strong>multiple inheritance of state</strong>)</li></ul></li>
+<li>automatic methods <br>
+<ul><li><code>values</code> — returns an array containing all the values of the enum in the order they are decalred <br>
+<ul><li>good for iteration</li></ul></li></ul></li>
+</ul>
+
+
+
+<h3 id="annotations">Annotations</h3>
+
+<dl>
+<dt>Annotations</dt>
+<dd>form of metadata</dd>
+
+<dd><a href="https://docs.oracle.com/javase/tutorial/java/annotations/index.html">see Java Tutorials for details</a></dd>
+</dl>
+
+<ul>
+<li>no direct effect on operation of the code</li>
+<li>uses <br>
+<ul><li>information for the compiler <br>
+<ul><li>detect errors</li>
+<li>suppress warnings</li></ul></li>
+<li>compile-time and deployment-time processing <br>
+<ul><li>software tools to generate code, XML files, etc.</li></ul></li>
+<li>runtime processing <br>
+<ul><li>examined at runtime</li></ul></li></ul></li>
+</ul>
+
+<p><a href="https://docs.oracle.com/javase/tutorial/java/annotations/predefined.html">Common Annotations</a></p>
+
+<table>
+<thead>
+<tr>
+  <th>Annotation</th>
+  <th>Purpose</th>
+</tr>
+</thead>
+<tbody><tr>
+  <td><code>@Override</code></td>
+  <td>informs the compiler that element is meant to override, else generates an error</td>
+</tr>
+<tr>
+  <td><code>@SuppressWarnings</code></td>
+  <td>suppress specific warnings (in quotes)</td>
+</tr>
+</tbody></table>
+
+
+
+
+<pre class="prettyprint"><code class="language-java hljs "><span class="hljs-comment">// use a deprecated method and suppress warnings</span>
+<span class="hljs-annotation">@SuppressWarnings</span>(<span class="hljs-string">"deprecation"</span>)
+<span class="hljs-keyword">void</span> useDeprecatedMethod() {
+    <span class="hljs-comment">// deprecated warning suppressed</span>
+    objectOne.deprecatedMethod();
+}</code></pre>
+
+
+
+<h3 id="interfaces-and-inheritance">Interfaces and Inheritance</h3>
+
+
+
+<h4 id="interface-definition">Interface Definition</h4>
+
+<ul>
+<li>declaration <br>
+<ul><li><code>public interface</code> keywords (implicitly public)</li>
+<li>csv of parent interfaces (can extend multiple)</li></ul></li>
+<li>body <br>
+<ul><li>abstract methods <br>
+<ul><li>followed by a <strong>semicolon</strong> but <strong>no braces</strong></li>
+<li>no implementation</li></ul></li>
+<li>default methods <br>
+<ul><li><code>default</code> modifier</li></ul></li>
+<li>static methods <br>
+<ul><li><code>static</code> keyword</li></ul></li>
+<li>constant declarations <br>
+<ul><li>implicitly <code>public</code>, <code>static</code>, <code>final</code></li></ul></li></ul></li>
+</ul>
+
+
+
+<pre class="prettyprint"><code class="language-java hljs "><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">GroupedInterface</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Interface1</span>, <span class="hljs-title">Interface2</span>, <span class="hljs-title">Interface3</span> {</span>
+    <span class="hljs-comment">// constant declarations</span>
+    <span class="hljs-keyword">double</span> E = <span class="hljs-number">2.718282</span>;
+
+    <span class="hljs-comment">// method signatures</span>
+    <span class="hljs-keyword">void</span> doSomething (<span class="hljs-keyword">int</span> i, <span class="hljs-keyword">double</span> x);
+    <span class="hljs-keyword">int</span> doSomethingElse (String s);
+}</code></pre>
+
+
+
+<h4 id="interface-implementation">Interface Implementation</h4>
+
+<ul>
+<li>add <code>implements</code> clause in class declaration</li>
+<li>class must <strong>write definitions</strong> for all the method signatures in interface</li>
+</ul>
+
+
+
+<pre class="prettyprint"><code class="language-java hljs "><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">RectanglePlus</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Relatable</span> {</span>
+    <span class="hljs-comment">// fields, constructors</span>
+
+    <span class="hljs-comment">// implementations</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">isLargerThan</span>(Relatable other) {
+        <span class="hljs-comment">// typecast other as this class type</span>
+        RectanglePlus otherRect = (RectanglePlus)other;
+
+        <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.getArea() &lt; otherRect.getArea()) {
+            <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.getArea &gt; otherRect.getArea()) {
+            <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;   
+        } <span class="hljs-keyword">else</span> {
+            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+        }
+    }
+}</code></pre>
+
+<ul>
+<li>can use interface names as a <strong>data type</strong></li>
+<li>write methods for <em>any</em> objects with the <strong>interface as a data type</strong> <br>
+<ul><li>make sure you <strong>typecast</strong></li></ul></li>
+</ul>
+
+
+
+<pre class="prettyprint"><code class="language-java hljs "><span class="hljs-comment">// where Relatable is an interface</span>
+<span class="hljs-keyword">public</span> Object <span class="hljs-title">findLargest</span>(Object object1, Object object2) {
+    <span class="hljs-comment">// cast as Relatable type to invoke interface methods</span>
+    Relatable obj1 = (Relatable)object1;
+    Relatable obj2 = (Relatable)object2;
+
+    <span class="hljs-keyword">if</span> ((obj1).isLargerThan(obj2) &gt; <span class="hljs-number">0</span>) {
+        <span class="hljs-keyword">return</span> object1;
+    } <span class="hljs-keyword">else</span> {
+        <span class="hljs-keyword">return</span> object2;
+    }
+}</code></pre>
+
+<ul>
+<li>can provide <strong>default methods</strong> for interfaces, as long as you define them <br>
+<ul><li>use <code>default</code> keyword</li></ul></li>
+</ul>
+
+
+
+<pre class="prettyprint"><code class="language-java hljs "><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">DoIt</span> {</span>
+    <span class="hljs-comment">// method signatures</span>
+    <span class="hljs-comment">//default method</span>
+    <span class="hljs-keyword">default</span> <span class="hljs-keyword">boolean</span> didItWork(<span class="hljs-keyword">int</span> i, <span class="hljs-keyword">double</span> x, String s) {
+        <span class="hljs-comment">// method body</span>
+    }
+}</code></pre>
+
+
+
+<h4 id="inheritance-theory">Inheritance Theory</h4>
+
+<dl>
+<dt>Subclass</dt>
+<dd>a class that is derived from another class (<code>extends</code> keyword)</dd>
+
+<dd>inherits all <code>public</code> and <code>protected</code> <strong>members</strong> (fields, methods, and nested classes), note constructors are not members</dd>
+
+<dd>aka, <strong>derived class</strong>, <strong>extended class</strong>,  <strong>child class</strong></dd>
+
+<dt>Superclass</dt>
+<dd>class <em>from which</em> the subclass is derived</dd>
+
+<dd>aka, <strong>base class</strong>, <strong>parent class</strong></dd>
+
+<dt>Single Inheritance</dt>
+<dd>every class has one and <strong>only one</strong> direct superclass</dd>
+
+<dd>every class is implicitly a subclass of <code>Object</code></dd>
+</dl>
+
+<p><a href="http://docs.oracle.com/javase/tutorial/java/IandI/override.html">Overriding and Hiding</a> Methods</p>
+
+<ul>
+<li><strong>overriding</strong> — <strong>instance</strong> method in subclass with same signature as subclass <br>
+<ul><li>called from superclass =&gt; get overriding subclass method</li>
+<li>inherit method that is “close enough”, then <em>modify</em> behavior as needed</li>
+<li><strong>covariant return type</strong> — can return <em>subtype</em> of type returned by overriden method in superclass</li>
+<li>use <code>@Override</code></li></ul></li>
+<li><strong>hiding</strong> — <code>static</code> method in subclass with same signature as superclass <br>
+<ul><li>called from superclass =&gt; get superclass static method</li>
+<li>called from subclass =&gt; get subclass static method</li></ul></li>
+</ul>
+
+<p><img src="https://dl.dropboxusercontent.com/u/72546174/COMP2911%20Notes/Screen%20Shot%202017-03-24%20at%208.31.29%20pm.png" alt="Defining a method with the same signature as a superclass's method" title=""></p>
+
+<ul>
+<li>typecasting is covariant</li>
+</ul>
+
+
+
+<pre class="prettyprint"><code class="language-Java hljs javascript"><span class="hljs-comment">// MountainBike ⇒ Bike ⇒ Object</span>
+<span class="hljs-built_in">Object</span> obj = <span class="hljs-keyword">new</span> MountainBike();    <span class="hljs-comment">// covariance</span>
+MountainBike myBike = (MountainBike)obj;    <span class="hljs-comment">// explicit casting</span></code></pre>
+
+<ul>
+<li>[X] <strong>multiple inheritance of state</strong>  — ability to inherit <strong>fields</strong> from multiple classes <br>
+<ul><li>problem — methods/constructors of different superclasses instantiate same field</li>
+<li>=&gt; solution — interfaces do not contain fields</li></ul></li>
+<li>[~X] <strong>multiple inheritance of implementation</strong> — ability to inherit <strong>method definitions</strong> from multiple classes <br>
+<ul><li>problem — name conflicts and ambiguity</li>
+<li>problem — class can implement multiple interfaces, with <strong>default methods</strong> of the same name</li>
+<li>=&gt; solution — Java compiler has rules to determine which it uses</li></ul></li>
+<li>[√] <strong>multiple inheritance of type</strong> — ability of a class to implement more than one <strong>interface</strong> <br>
+<ul><li>multiple types — its own class + all the interfaces it implements <br>
+<ul><li>using an interface as a type</li></ul></li></ul></li>
+</ul>
+
+
+
+<h4 id="inheritance-and-super">Inheritance and <code>super</code></h4>
+
+
+
+<pre class="prettyprint"><code class="language-java hljs ">class Moutainbike extends Bicycle {
+    <span class="hljs-comment">// new fields and methods defining</span>
+    <span class="hljs-comment">// a mountain bike would go here</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> seatHeight;
+
+    <span class="hljs-comment">// constructor invoking superclass's constructor</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-title">MountainBike</span> (<span class="hljs-keyword">int</span> startHeight, <span class="hljs-keyword">int</span> startCadence, <span class="hljs-keyword">int</span> startSpeed, <span class="hljs-keyword">int</span> startGear) {
+        <span class="hljs-keyword">super</span>(startCadence, startSpeed, startGear);
+        seatHeight = startHeight;
+    }
+
+    <span class="hljs-comment">// override methods with same name in superclass</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printMethod</span>() {
+        <span class="hljs-keyword">super</span>.printMethod();
+        System.out.println(<span class="hljs-string">"Printed in Subclass"</span>);
+    }
+}</code></pre>
+
+
+
+<h3 id="numbers-and-strings">Numbers and Strings</h3>
+
+
+
+<h3 id="date-time-package">Date-Time Package</h3>
+
+
+
+<h2 id="eclipse-tutorial">Eclipse Tutorial</h2>
+
+<p><a href="http://www.vogella.com/tutorials/Eclipse/article.html">Eclipse Tutorial Website</a></p>
+
+<hr>
+
+
+
+<h1 id="week-2">Week 2</h1>
+
+<p>LSP and some more basic OOP in Java.</p>
+
+
+
+<h2 id="liskov-substitution-principle">Liskov Substitution Principle</h2>
+
+<dl>
+<dt>Liskov Substitution Principle</dt>
+<dd>derived subtypes must be <em>completely</em> substitutable for their base types</dd>
+
+<dd><em>functions</em> that use base types can be <em>reused</em> with impunity, <em>derived types</em> can be <em>changed</em> with impunity</dd>
+
+<dd>functions that use pointers or references to base classes must be able to use objects of derived classes without knowing it</dd>
+
+<dt>Dynamic Binding</dt>
+<dd>consequence of inheritance</dd>
+
+<dt>Open-Closed principle</dt>
+<dd>well designed code can be extended without modification</dd>
+
+<dd>new features are added by <em>adding new code</em> rather than <em>changing</em> old, already working code</dd>
+</dl>
+
+<p>Mechanisms of Open-Closed principle</p>
+
+<ul>
+<li>abstraction</li>
+<li>polymorphism</li>
+<li>=&gt; inheritance</li>
+</ul>
+
+<p>Example of Violation of LSP</p>
+
+<ul>
+<li><code>Rectangle</code> base class with derived <code>Square</code> class</li>
+<li>“is-a” relationship holds =&gt; logical to subtype</li>
+<li>problems <br>
+<ul><li><code>Square</code> doesn’t need both <code>height</code> and <code>width</code></li>
+<li>can modify setters to change them together</li>
+<li>BUT passing a <code>Square</code> to a function that assumed <code>Rectangle</code> will have assert failures when changing height then width</li>
+<li>this is <strong>not an ISA relationship</strong> <br>
+<ul><li><strong>extrinsic public behavior</strong> of <code>Square</code> and <code>Rectangle</code> differ</li></ul></li></ul></li>
+<li>=&gt; validity of a model expressed <em>in terms of clients</em> <br>
+<ul><li>have to anticipate assumptions made</li></ul></li>
+<li>solution — <strong>Design by Contract</strong> <br>
+<ul><li>specify <strong>preconditions</strong>  and <strong>postconditions</strong></li>
+<li>for derivatives, may only replace <br>
+<ul><li>precondition by a <strong>weaker</strong> one</li>
+<li>postcondition by a <strong>stronger</strong> one</li></ul></li></ul></li>
+</ul>
+
+
+
+<h2 id="oo-programming-vs-abstract-data-types">OO Programming vs. Abstract Data Types</h2>
+
+
+
+<h2 id="object-as-a-superclass">Object as a Superclass</h2>
+
+<p>Need to <strong>override</strong> methods inherited from <code>Object</code> superclass to fit your class.</p>
+
+
+
+<h3 id="clone-method">clone() Method</h3>
+
+
+
+<pre class="prettyprint"><code class="language-java hljs "><span class="hljs-comment">// returns a copy of an existing object</span>
+<span class="hljs-keyword">protected</span> Object <span class="hljs-title">clone</span>() <span class="hljs-keyword">throws</span> CloneNotSupportedException;
+
+<span class="hljs-comment">// usage</span>
+aCloneableObject.clone();</code></pre>
+
+<ul>
+<li>need to implement the <code>Cloneable</code> interface <br>
+<ul><li>add <code>implements Cloneable</code> to class declaration</li></ul></li>
+<li><code>@Override</code> <code>clone()</code> if your object references to external objects <br>
+<ul><li><strong>decouple</strong> the external object from clone and original</li>
+<li>otherwise default <code>clone()</code> should work</li></ul></li>
+<li>use a <strong>try-catch block</strong> to catch <code>CloneNotSupportedException</code></li>
+</ul>
+
+
+
+<pre class="prettyprint"><code class="language-java hljs "><span class="hljs-annotation">@Override</span>
+<span class="hljs-keyword">public</span> Object <span class="hljs-title">clone</span>() {
+    Employee cloned;
+
+    <span class="hljs-keyword">try</span>{
+        <span class="hljs-comment">// call Object's clone function</span>
+        cloned = (Employee)<span class="hljs-keyword">super</span>.clone();
+    } <span class="hljs-keyword">catch</span> (CloneNotSupportedException e) {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">null</span>;
+    }
+
+    cloned.name = <span class="hljs-keyword">this</span>.name;
+    cloned.salary = <span class="hljs-keyword">this</span>.salary;
+    <span class="hljs-comment">// clone any external references, i.e. in Manager</span>
+    cloned.HireDate = (Calendar) hireDate.clone();
+}</code></pre>
+
+
+
+<h3 id="equals-method">equals() Method</h3>
+
+
+
+<pre class="prettyprint"><code class="language-java hljs "><span class="hljs-comment">// compares two objects for equality</span>
+<span class="hljs-keyword">protected</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">equals</span>(Object obj);</code></pre>
+
+<ul>
+<li>default — uses <code>==</code> to see if object <em>references</em> are equal</li>
+<li><code>@Overrride</code> to get equivalency <br>
+<ul><li>remember to <code>@Override</code> <code>hashCode()</code> as well</li></ul></li>
+<li>caution — preserve <code>equals</code> when <em>subclassing</em></li>
+</ul>
+
+
+
+<h4 id="4-common-pitfalls">4 Common Pitfalls</h4>
+
+<p>Equals may seem to work fine, but <a href="http://www.artima.com/lejava/articles/equality.html">a lot of problems</a> come up when you put objects in <strong>collections</strong> (i.e. hash sets).  DO the following:</p>
+
+<ol>
+<li><p>Define <code>equals</code> with the <strong>right signature</strong></p>
+
+<ul><li>need to match the signature <em>exactly</em>, use <code>Object</code> not subclass, then <strong>typecast</strong></li>
+<li>otherwise not <em>actually</em> overriding</li></ul>
+
+<pre class="prettyprint"><code class="language-java hljs "><span class="hljs-annotation">@Override</span>
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">equals</span>(Object other) {
+    <span class="hljs-keyword">boolean</span> result = <span class="hljs-keyword">false</span>;
+    <span class="hljs-keyword">if</span> (other <span class="hljs-keyword">instanceof</span> Point) {
+        <span class="hljs-comment">// typecast if is subclass that you want</span>
+        Point that = (Point) other;
+        <span class="hljs-comment">// NOW, see if the two are equal</span>
+        result = (<span class="hljs-keyword">this</span>.getX() == that.getX()) &amp;&amp; (<span class="hljs-keyword">this</span>.getY() == that.getY()) &amp;&amp; <span class="hljs-keyword">this</span>.canEqual(that);
+    }
+    <span class="hljs-keyword">return</span> result;
+}</code></pre></li>
+<li><p>Change <strong><code>hashCode</code></strong> whenever you change <code>equals</code></p>
+
+<ul><li>problem when using <code>HashSet</code></li>
+<li><code>hashCode</code> may only depend on fields that <code>equals</code> depends on <br>
+<pre class="prettyprint"><code class="language-java hljs "><span class="hljs-comment">// i.e. if equals tests for x and y of Point above</span>
+<span class="hljs-comment">// can use x and y fields in hashCode</span>
+<span class="hljs-annotation">@Override</span>
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">hashCode</span>() {
+    <span class="hljs-keyword">return</span> (<span class="hljs-number">41</span> * (<span class="hljs-number">41</span> + getX()) + getY());
+}</code></pre></li></ul></li>
+<li><p>Define <code>equals</code> and <code>hashcode</code> in terms of <strong>immutable fields</strong></p>
+
+<ul><li>make sure fields used are <code>final</code> <br>
+<ul><li>otherwise equality and hash code changes with fields</li></ul></li></ul>
+
+<pre class="prettyprint"><code class="language-java hljs "><span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span> x;
+<span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span> y;</code></pre></li>
+<li><p>Define <code>equals</code> as an <strong>equivalence relation</strong> using <code>canEqual</code></p>
+
+<ul><li>add <code>canEqual</code> method to every class that redefines <code>equals</code> <br>
+<ul><li>objects of a class <code>!=</code> objects of superclass</li></ul></li>
+<li>check for <code>canEqual</code> when checking for equality</li></ul>
+
+<pre class="prettyprint"><code class="language-java hljs "><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">canEqual</span>(Object other) {
+    <span class="hljs-comment">// replace Point with whatever subclass you are in</span>
+    <span class="hljs-keyword">return</span> (other <span class="hljs-keyword">instanceof</span> Point);
+}</code></pre>
+
+<ul><li>on <strong>non-<code>null</code></strong> objects <code>x</code>, <code>y</code>, <code>z</code> <br>
+<ul><li><strong>reflexive</strong>: <code>x.equals(x)</code> returns <code>true</code></li>
+<li><strong>symmetric</strong>: <code>x.equals(y)</code>  iff <code>y.equals(z)</code> </li>
+<li><strong>transitive</strong>: <code>x.equals(y)</code> and <code>y.equals(z)</code> =&gt; <code>x.equals(z)</code></li></ul></li>
+<li>more complicated once <strong>subclassing</strong> <br>
+<ul><li>problem =&gt; symmetric and transitive breaks</li>
+<li>solution =&gt; redefine <code>canEqual</code> method</li></ul></li>
+<li>but violates <strong>LSP</strong> <br>
+<ul><li>should be able to substitute subclass into superclass</li>
+<li>but LSP doesn’t require subclass behave <em>identically</em>, just fulfill <em>contract</em> of superclass</li></ul></li></ul></li>
+</ol>
+
+
+
+<h3 id="tostring-method">toString() Method</h3>
+
+
+
+<pre class="prettyprint"><code class="language-java hljs "><span class="hljs-comment">// returns a string representation of an object</span>
+<span class="hljs-comment">// good for debugging</span>
+<span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span>();
+
+<span class="hljs-comment">// use</span>
+System.out.println(firstBook.toString());</code></pre>
+
+<ul>
+<li>always <code>@Override</code>, representation dependent on class</li>
+</ul>
+
+
+
+<pre class="prettyprint"><code class="language-Java hljs java"><span class="hljs-comment">// standard implementation</span>
+<span class="hljs-annotation">@Override</span>
+<span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span>() {
+    <span class="hljs-keyword">return</span> getClass().getName() + <span class="hljs-string">"[field1 = "</span> + field1 + <span class="hljs-string">"field2 = "</span> + field2;
+}</code></pre>
+
+
+
+<h3 id="hashcode-method">hashCode() Method</h3>
+
+
+
+<pre class="prettyprint"><code class="language-java hljs "><span class="hljs-comment">// returns object's hash code</span>
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">hashCode</span>();</code></pre>
+
+<dl>
+<dt>Hash Code</dt>
+<dd>Object’s memory address in hexadecimal</dd>
+</dl>
+
+<ul>
+<li>two objects are equal =&gt; hash code equal</li>
+<li><code>@Override</code> <code>equals()</code> =&gt; <code>@Override</code> <code>hashCode()</code> <br>
+<ul><li>method becomes invalid if you override equals</li></ul></li>
+</ul>
+
+
+
+<h3 id="getclass-method">getClass() Method</h3>
+
+
+
+<pre class="prettyprint"><code class="language-java hljs "><span class="hljs-comment">// returns a Class object with methods to get information about the class</span>
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">final</span> Class <span class="hljs-title">getClass</span>();
+
+<span class="hljs-comment">// uses</span>
+obj.getClass().getSimpleName();
+obj.getClass().getName();
+obj.getClass().getFields();
+obj.getClass().getMethods();
+
+obj.getClass().isAnnotation();
+obj.getClass().isInterface();
+obj.getClass().isEnum();</code></pre>
+
+<ul>
+<li>cannot override</li>
+<li>see docs on <code>Class</code> for <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html">all the methods</a></li>
+</ul>
+
+
+
+<h3 id="finalize-method">finalize() Method</h3>
+
+
+
+<pre class="prettyprint"><code class="language-java hljs "><span class="hljs-comment">// may invoke on object that has become garbage</span>
+<span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">finalize</span>() <span class="hljs-keyword">throws</span> Throwable</code></pre>
+
+<ul>
+<li><code>@Override</code> to do cleanup, i.e. freeing</li>
+<li>may be called auotmatically, but uncertain, so don’t rely on this to do cleanup</li>
+</ul>
+
+<hr>
+
+
+
+<h1 id="week-3">Week 3</h1>
+
+<p>Design by Contract and how to apply it: respecting covariance / contravariance, handling exceptions, debugging.</p>
+
+
+
+<h2 id="applying-design-by-contract">Applying “Design by Contract”</h2>
+
+<p>Components of Design by Contract</p>
+
+<ul>
+<li>set of <em>methodological principles</em> to produce <em>correct</em> and <em>robust</em> software <br>
+<ul><li><strong>correct</strong> — returns accurate and reliable results</li>
+<li><strong>robust</strong> —ensure software continues to operate, even if it results in inaccuracues</li></ul></li>
+<li>exception-handling mechanism</li>
+<li>understanding of inheritance and associated techniques (redeclaration, polymorphism, dynamic binding) via subcontract</li>
+</ul>
+
+<p>Defensive Programming</p>
+
+<ul>
+<li>protect software against all possible events</li>
+<li>increases software <em>complexity</em> ⇒ dec software quality</li>
+<li>uses <strong>assertions</strong> to document pre and post <br>
+<ul><li><strong>disable</strong> in production so app doesn’t crash</li></ul></li>
+</ul>
+
+<p>Components of Design by Contract</p>
+
+<ul>
+<li><strong>precondition</strong> — requirements that any call must satisfy if the call is to be correct</li>
+<li><strong>postcondition</strong> — properties that are ensured in return by the execution of the call</li>
+<li><strong>class invariants</strong> — property that applies to <em>all instances</em> of the class, transcending particular routines <br>
+<ul><li>all procedures must satisfy the invariant</li>
+<li>incorporated with pre and post of all methods</li></ul></li>
+</ul>
+
+<p>Assertions vs Exception Handling</p>
+
+<p>Inheritance Stuff</p>
+
+<blockquote>
+  <p>Applications to Coding</p>
+  
+  <ul>
+  <li>use <code>@pre</code> and <code>@post</code> tags to specify in Javadoc</li>
+  <li>use <code>throws</code> to specify exceptions <br>
+  <ul><li>precondition violations that are part of the contract</li>
+  <li>include standard errors and <strong>custom exceptions</strong></li></ul></li>
+  </ul>
+</blockquote>
+
+
+
+<h2 id="covariance-and-contravariance">Covariance and Contravariance</h2>
+
+
+
+<h2 id="exceptions-in-java">Exceptions in Java</h2>
+
+
+
+<h2 id="junit-in-eclipse">JUnit in Eclipse</h2>
+
+
+
+<h2 id="eclipse-debugger">Eclipse Debugger</h2>
+
+<hr>
+
+
+
+<h1 id="week-4">Week 4</h1>
+
+<p>Walk through the steps of the OOP design process and introduce Law of Demeter.</p>
+
+
+
+<h2 id="oop-design-process">OOP Design Process</h2>
+
+<ol>
+<li>Use Cases and Walkthroughs</li>
+<li>CRC Cards</li>
+<li>UML Class Diagrams</li>
+<li>UML Sequence Diagrams</li>
+</ol>
+
+
+
+<h2 id="use-cases">Use Cases</h2>
+
+<ul>
+<li><strong>Use Case</strong> — <em>functional</em> requirements of what the system is expected to do <br>
+<ul><li><em>list</em> of actions / event steps <br>
+<ul><li>don’t need a diagram for now</li></ul></li>
+<li>interactions between <strong>actor</strong> and a system’</li></ul></li>
+</ul>
+
+<p>Example from W4 Lab: Enrolment System</p>
+
+<ol>
+<li>System shows list of courses</li>
+<li>User selects a course</li>
+<li>User asks System to enrol in course</li>
+<li>System check prereq of course</li>
+<li>System allocates sessions to User</li>
+<li>System display ssessions to User</li>
+</ol>
+
+
+
+<h2 id="crc-cards">CRC Cards</h2>
+
+<dl>
+<dt>CRC Cards</dt>
+<dd>characterize objects by <strong>class name</strong>, <strong>responsibilities</strong>, and <strong>collaborators</strong></dd>
+</dl>
+
+<ul>
+<li>class name <br>
+<ul><li>vocabulary for discussing design</li>
+<li>find the right set of words to describe</li></ul></li>
+<li>responsibilities <br>
+<ul><li>identify problem to be solved using <em>active verb</em> phrase</li></ul></li>
+<li>collaborators <br>
+<ul><li>objects which will send or be sent messages</li></ul></li>
+<li>positioning of cards <br>
+<ul><li>overlapping — close collaboration</li>
+<li>above — supervision <br>
+<ul><li>parts arranged below the whole</li></ul></li>
+<li>stack — refinements in abstraction, most abstract card on top</li></ul></li>
+<li>design process <br>
+<ul><li>move from knowns to unknowns</li>
+<li>use execution scenarios — ask “what-if” qeustions <br>
+<ul><li>new responsibility found <br>
+<ul><li>=&gt; add responsibility to object</li>
+<li>=&gt; create new object </li></ul></li></ul></li>
+<li>avoid premature complexity <br>
+<ul><li>don’t try to anticipate future needs</li></ul></li></ul></li>
+</ul>
+
+<p><img src="http://agilemodeling.com/images/models/crcCardLayout.jpg" alt="CRC Card Template" title=""></p>
+
+<p>Online Tool</p>
+
+
+
+<h2 id="uml-diagrams">UML Diagrams</h2>
+
+<p>UML (Unified Modeling Language) </p>
+
+
+
+<h3 id="class-diagrams">Class Diagrams</h3>
+
+<ul>
+<li>classes in system</li>
+<li>attributes and operations of each class</li>
+<li>relationships between classes</li>
+</ul>
+
+
+
+<h4 id="classes">Classes</h4>
+
+<ul>
+<li>box with 3 sections <br>
+<ul><li>class name</li>
+<li>fields</li>
+<li>methods</li></ul></li>
+</ul>
+
+<p><img src="http://www.cs.bsu.edu/homepages/pvg/misc/uml/example_class.png" alt="UML individual class" title=""></p>
+
+
+
+<h4 id="attributes-and-operations">Attributes and Operations</h4>
+
+<ul>
+<li>access level annotations <br>
+<ul><li><code>+</code> — public</li>
+<li><code>-</code> — private</li>
+<li><code>#</code> — protected</li></ul></li>
+<li>member type <br>
+<ul><li><code>underline</code> — static </li>
+<li><em><code>italicized</code></em> — abstract </li></ul></li>
+<li>naming <br>
+<ul><li><code>name:type</code> for variables</li>
+<li><code>name(params):type</code> for methods</li></ul></li>
+<li>metadata <br>
+<ul><li>using stereotypes in <code>&lt;&lt; &gt;&gt;</code></li>
+<li>i.e. identify constructor using <code>&lt;&lt;constructor&gt;&gt;</code></li>
+<li>i.e. interfaces use <code>&lt;&lt;interface&gt;&gt;</code></li></ul></li>
+</ul>
+
+<p><img src="http://www.cs.bsu.edu/homepages/pvg/misc/uml/example_class2.png" alt="UML member type annotations" title=""> <img src="http://www.cs.bsu.edu/homepages/pvg/misc/uml/interface.png" alt="UML interafce annotation" title=""></p>
+
+
+
+<h4 id="relationships">Relationships</h4>
+
+
+
+<h5 id="types">Types</h5>
+
+<table>
+<thead>
+<tr>
+  <th>Relationship</th>
+  <th>Depiction</th>
+  <th>Interpretation</th>
+</tr>
+</thead>
+<tbody><tr>
+  <td>Dependency</td>
+  <td><img src="http://www.cs.bsu.edu/homepages/pvg/misc/uml/dependency.png" alt="Dependency" title=""></td>
+  <td>A <strong>depends</strong> on B. <br><br> Loose relationship.</td>
+</tr>
+<tr>
+  <td>Association</td>
+  <td><img src="http://www.cs.bsu.edu/homepages/pvg/misc/uml/association.png" alt="Association" title=""></td>
+  <td>A <strong>sends messages</strong> to B <br>Direct communication path. <br>B is <em>passed</em> to a method of an A.</td>
+</tr>
+<tr>
+  <td>Aggregation</td>
+  <td><img src="http://www.cs.bsu.edu/homepages/pvg/misc/uml/aggregation.png" alt="Aggregation" title=""></td>
+  <td>A is <strong>made up</strong> of B. <br> A is whole, B is part.<br>A has <em>fields</em> of type B.</td>
+</tr>
+<tr>
+  <td>Composition</td>
+  <td><img src="http://www.cs.bsu.edu/homepages/pvg/misc/uml/composition.png" alt="Composition" title=""></td>
+  <td>A is made up of B with <strong>lifetime dependency</strong>. <br> If A is destroyed, its B are destroyed as well.</td>
+</tr>
+</tbody></table>
+
+
+
+
+<h5 id="multiplicity">Multiplicity</h5>
+
+<ul>
+<li>how many of each object involved in relationship <br>
+<ul><li><code>1</code> — constant (assumed)</li>
+<li><code>*</code> — unbounded, 0+</li>
+<li><code>2..*</code> — range</li></ul></li>
+</ul>
+
+
+
+<h5 id="roles">Roles</h5>
+
+<ul>
+<li>may translate into fields</li>
+<li>annotate arrow</li>
+</ul>
+
+<p><img src="http://www.cs.bsu.edu/homepages/pvg/misc/uml/player_achievement.png" alt="UML multiplicity and roles" title=""></p>
+
+
+
+<h5 id="directionality">Directionality</h5>
+
+<ul>
+<li>unidirectional — arrow in one direction</li>
+<li>bidirectional — straight line, no arrowhead</li>
+</ul>
+
+<p><img src="http://www.cs.bsu.edu/homepages/pvg/misc/uml/customer_account.png" alt="UML directionality" title=""></p>
+
+
+
+<h5 id="generalization-and-realization">Generalization and Realization</h5>
+
+<table>
+<thead>
+<tr>
+  <th>Relationship</th>
+  <th>Depiction</th>
+  <th>Interpretation</th>
+</tr>
+</thead>
+<tbody><tr>
+  <td>Generalization</td>
+  <td><img src="http://www.cs.bsu.edu/homepages/pvg/misc/uml/generalization.png" alt="Generalization" title=""></td>
+  <td>A <strong>generalizes</strong> B.<br><br>B is a subclass of A. <br><br>B <code>extends</code> A.</td>
+</tr>
+<tr>
+  <td>Realization</td>
+  <td><img src="http://www.cs.bsu.edu/homepages/pvg/misc/uml/realization.png" alt="Realization" title=""></td>
+  <td>B <strong>realizes</strong> the <strong>interface</strong> defined in A.<br><br>B <code>implements</code> A.<br><br> Give A the <code>&lt;&lt;interface&gt;&gt;</code> stereotype.</td>
+</tr>
+</tbody></table>
+
+
+
+
+<h4 id="other-components">Other Components</h4>
+
+<table>
+<thead>
+<tr>
+  <th>Purpose</th>
+  <th>Depiction</th>
+  <th>Interpretation</th>
+</tr>
+</thead>
+<tbody><tr>
+  <td>Communication via Interface</td>
+  <td><img src="http://www.cs.bsu.edu/homepages/pvg/misc/uml/button_listener_1.png" alt="Interface 1" title=""><br><img src="http://www.cs.bsu.edu/homepages/pvg/misc/uml/button_listener_2.png" alt="Ball and Socket Notation" title=""></td>
+  <td>Communication between <code>Button</code> and <code>SomethingSpecific</code> happens <em>through</em> the <code>ActionListener</code> interface</td>
+</tr>
+<tr>
+  <td>Notes</td>
+  <td><img src="http://www.cs.bsu.edu/homepages/pvg/misc/uml/note.png" alt="UML Notes" title=""></td>
+  <td>Connect note with <em>dashed</em> line</td>
+</tr>
+</tbody></table>
+
+
+
+
+<h3 id="sequence-diagrams">Sequence Diagrams</h3>
+
+<ul>
+<li>sequential <strong>order</strong> of the interactions between objects</li>
+<li>refines <strong>use cases</strong></li>
+<li>emphasize <em>order</em> of messages <br>
+<ul><li>might also include <em>content</em> of messages</li></ul></li>
+</ul>
+
+
+
+<h4 id="lifelines">Lifelines</h4>
+
+<ul>
+<li><em>participants</em> of sequence being modeled <br>
+<ul><li>roles / object instances</li>
+<li>would be modeled ina  class diagram</li></ul></li>
+<li>notation <br>
+<ul><li>box w/ dashed line descending from center of bottom</li>
+<li>name in box <br>
+<ul><li><code>instance name: class</code> <br>
+<ul><li>can leave either part blank</li></ul></li>
+<li><code>underline</code> for <strong>specific instance</strong> of a class, not kind of instance <br>
+<ul><li>role : buyer and seller</li>
+<li>instances: Bill and Fred</li></ul></li></ul></li></ul></li>
+</ul>
+
+<p><img src="https://www.ibm.com/developerworks/rational/library/content/RationalEdge/feb04/3101_figure3.jpg" alt="UML Lifeline" title=""></p>
+
+
+
+<h4 id="messages">Messages</h4>
+
+<ul>
+<li>start at top-left <br>
+<ul><li>subsequent messages — slightly lower than previous</li></ul></li>
+<li>arrow to receiving object <br>
+<ul><li>solid arrowhead — <strong>synchronous</strong> signal</li>
+<li>stick arrowhead — <strong>asynchronous</strong> signal</li>
+<li>name above arrow</li></ul></li>
+<li>return messages (optional) <br>
+<ul><li>dotted line w/ open arrowhead back</li>
+<li>return value — above dotted line</li></ul></li>
+<li>reflexive calls <br>
+<ul><li>normal arrow but to itself</li></ul></li>
+</ul>
+
+<p><img src="https://www.ibm.com/developerworks/rational/library/content/RationalEdge/feb04/3101_figure5.jpg" alt="UML Messages" title=""></p>
+
+
+
+<h4 id="guards">Guards</h4>
+
+<ul>
+<li>controls flow — condition must be met for message to be sent <br>
+<ul><li><em>above</em> message being guarded</li>
+<li><em>before</em> message name</li>
+<li><code>[Boolean Test]</code>, i.e. <code>[pastDueBalance = 0]</code></li></ul></li>
+</ul>
+
+
+
+<h4 id="combined-fragments-alternatives-options-and-loops">Combined Fragments (Alternatives, Options, and Loops)</h4>
+
+<ul>
+<li>replaces guards in UML 2 <br>
+<ul><li>guards insufficient to handle logic</li></ul></li>
+<li><strong>Combined Fragment</strong> — <em>group</em> sets of messages to show <em>conditional</em> flow <br>
+<ul><li>11 interaction types <br>
+<ul><li>basics — alternatives, options, loops</li>
+<li>beyond the basics — break, parallel</li>
+<li>others — look up</li></ul></li></ul></li>
+</ul>
+
+
+
+<h5 id="alternatives">Alternatives</h5>
+
+<ul>
+<li>if-then/else logic <br>
+<ul><li><em>mutually exclusive</em> choice between 2+ message sequences</li></ul></li>
+<li>drawn in a <strong>frame</strong> <br>
+<ul><li><code>alt</code> in namebox</li>
+<li>divide into 2+ <strong>operands</strong> <br>
+<ul><li><code>---</code> dashed line to separate</li></ul></li>
+<li><strong>guard</strong> in top-left to test against <br>
+<ul><li><code>[boolean expression]</code></li>
+<li>on top of <em>lifeline</em> <br>
+<ul><li>the one that <em>owns the variable</em> in guard</li></ul></li></ul></li></ul></li>
+</ul>
+
+<p><img src="https://www.ibm.com/developerworks/rational/library/content/RationalEdge/feb04/3101_figure8.jpg" alt="UML Alternatives" title=""></p>
+
+
+
+<h5 id="options">Options</h5>
+
+<ul>
+<li>if logic <br>
+<ul><li>guard true ⇒  sequence occurs</li>
+<li>otherwise <em>doesn’t</em> occur</li></ul></li>
+<li>simlar to <code>alt</code> notation <br>
+<ul><li>only <strong>1 operand</strong></li>
+<li><code>opt</code> nametag</li></ul></li>
+</ul>
+
+<p><img src="https://www.ibm.com/developerworks/rational/library/content/RationalEdge/feb04/3101_figure9.jpg" alt="UML Options" title=""></p>
+
+
+
+<h5 id="loops">Loops</h5>
+
+<ul>
+<li>repetitive sequence</li>
+<li>similar to <code>opt</code> notation <br>
+<ul><li><code>loop</code>nametag</li>
+<li>guard components <br>
+<ul><li>boolean test</li>
+<li>minimum iterations (optional) <br>
+<ul><li><code>minint = [the number]</code></li></ul></li>
+<li>maximum iterations (optional) <br>
+<ul><li><code>maxint = [the number]</code></li></ul></li></ul></li></ul></li>
+</ul>
+
+<p><img src="http://diadraw.com/wp-content/uploads/2011/12/UML-2.0-Sequence-Diagrams-loop-introduction.jpg" alt="UML Loop" title=""></p>
+
+
+
+<h5 id="break">Break</h5>
+
+<ul>
+<li>like <code>break</code> keyword <br>
+<ul><li>for exception handling</li></ul></li>
+<li>guard for when to enter break frame <br>
+<ul><li>executes messages in frame</li>
+<li>then breaks out of <strong>enclosing</strong> interaction sequence <br>
+<ul><li>i.e. alt or loop if in one, otherwise the entire sequence</li></ul></li></ul></li>
+<li>if don’t enter guard <br>
+<ul><li>continues with messages below break</li></ul></li>
+<li>notation <br>
+<ul><li>frame with <code>break</code> nametag</li>
+<li>guard with <code>[boolean expression]</code></li></ul></li>
+</ul>
+
+<p><img src="https://www.ibm.com/developerworks/rational/library/content/RationalEdge/feb04/3101_figure16.jpg" alt="UML Guard" title=""></p>
+
+
+
+<h5 id="parallel">Parallel</h5>
+
+<ul>
+<li>parallel processing activities for concurrent tasks</li>
+<li>notation <br>
+<ul><li>frame</li>
+<li><code>par</code> nametag</li>
+<li>break into <strong>operands</strong> <br>
+<ul><li>each operand is a <strong>thread</strong> in parallel</li></ul></li></ul></li>
+</ul>
+
+<p><img src="https://www.ibm.com/developerworks/rational/library/content/RationalEdge/feb04/3101_figure17.jpg" alt="UML Parallel" title=""></p>
+
+
+
+<h4 id="interaction-occurrence">Interaction Occurrence</h4>
+
+<ul>
+<li>referencing another sequence diagram <br>
+<ul><li>pass info via parameters and return values</li>
+<li>simple sequences ⇒ complex sequences</li></ul></li>
+<li><a href="https://www.ibm.com/developerworks/rational/library/3101.html">more info on website, probably won’t need</a></li>
+</ul>
+
+
+
+<h4 id="gates">Gates</h4>
+
+<ul>
+<li>pass info between sequence diagram and <em>context</em></li>
+<li><a href="https://www.ibm.com/developerworks/rational/library/3101.html">see website</a> </li>
+</ul>
+
+
+
+<h4 id="frame">Frame</h4>
+
+<ul>
+<li>delimits graphical boundary of diagram</li>
+<li><strong>diagram label</strong> — top left corner in <strong>dog-eared rectangle</strong> namebox <br>
+<ul><li><code>Diagram Type Diagram Name</code></li></ul></li>
+<li>incoming and outgoing messages <br>
+<ul><li>connect messages to the <em>border</em> of the frame</li></ul></li>
+</ul>
+
+<p><img src="https://www.ibm.com/developerworks/rational/library/content/RationalEdge/feb04/3101_figure2.jpg" alt="UML Frame" title=""></p>
+
+
+
+<h2 id="law-of-demeter">Law of Demeter</h2>
+
+<dl>
+<dt>Law of Demeter (LoD)</dt>
+<dd>each unit should have only <strong>limited</strong> knowledge about other units; only units <strong>“closely”</strong> related to the current unit <br>
+each unit should only talk to its <strong>friends</strong>; don’t talk to <strong>strangers</strong> <br>
+only talk to your <strong>immediate</strong> friends <br>
+aka <strong>principle of least knowledge</strong></dd>
+</dl>
+
+<ul>
+<li>specific case of <strong>loose coupling</strong> <br>
+<ul><li><em>assume as little as possible</em> about the structure / properties of anything else</li></ul></li>
+<li><strong>Law of Demeter for Functions/Methods</strong> (LoD-F) <br>
+<ul><li>specific for OOP</li>
+<li><code>A</code> shouldn’t <em>reach through</em> object <code>B</code> to access an object <code>C</code></li>
+<li>solutions <br>
+<ul><li>modify <code>B</code>’s <strong>interface</strong></li>
+<li><code>A</code> should <strong>directly reference</strong> <code>C</code></li></ul></li>
+<li>“use only <strong>one dot</strong>” <br>
+<ul><li>breaks law — <code>a.b.Method()</code></li>
+<li>complies — <code>a.Method()</code> <br>
+<ul><li>want dog to walk ⇒ command the dog ⇒ dog commands legs</li>
+<li>don’t command the legs directly</li></ul></li></ul></li></ul></li>
+<li>function that requires a method <code>m</code> of an object <code>o</code> may only invoke the following <br>
+<ul><li><code>o</code> itself</li>
+<li><code>m</code>’s parameters</li>
+<li>any objects <em>created/ instantiated</em> within <code>m</code></li>
+<li><code>o</code>’s direct component objects</li>
+<li>a global variable, accessible by <code>o</code>, in the scope of <code>m</code></li>
+<li>NOT — objects returned by <code>m</code></li></ul></li>
+<li>advantages <br>
+<ul><li>increase maintainability and adaptability</li>
+<li>containers changed without reworking callers</li></ul></li>
+<li>disadvantages <br>
+<ul><li>many wrapper methods ⇒ time &amp; space overhead</li></ul></li>
+</ul>
+
+<p><img src="https://dl.dropboxusercontent.com/u/72546174/COMP2911%20Notes/Law%20of%20Demeter.png" alt="Law of Demeter Slide Diagram" title=""></p>
+
+<hr>
+
+
+
+<h1 id="week-5">Week 5</h1>
+
+
+
+<h2 id="polymorphism-and-interface-types">Polymorphism and Interface Types</h2>
+
+<p><a href="http://docs.oracle.com/javase/tutorial/java/IandI/polymorphism.html">Look at the Java Tutorials on Polymorphism as well</a></p>
+
+
+
+<h2 id="java-generics-tutorial">Java Generics Tutorial</h2>
+
+
+
+<h2 id="java-generics-gotchas">Java Generics Gotchas</h2>
+
+
+
+<h2 id="java-generics-faq">Java Generics FAQ</h2>
